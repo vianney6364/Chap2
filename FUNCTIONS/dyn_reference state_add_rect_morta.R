@@ -42,10 +42,10 @@ ecotroph_core_dyn_ref_rect_morta<-function(data_envi_rect,eco_type,dtime,npp_ref
            #'*without mortality*
            # kinetic=(20.19*(tl^(-3.26))*exp(.041*sst))*dtime,
            #'*with mortality*
-           kinetic=(20.19*(tl^(-3.26))*exp(.041*sst_year)+fishing)*dtime,
+           kinetic=(20.19*(tl^(-3.26))*exp(.041*sst_year)+fishing),
            heat_tho=(kinetic*mortality),
            # heat_tho=mortality,
-           kinetic_heat=kinetic+heat_tho*dtime,
+           kinetic_heat=kinetic+heat_tho,
            delta_tl_dyn=TLsup-TLinf,
            cumsum=cumsum(delta_tl_dyn))
   #' } else {

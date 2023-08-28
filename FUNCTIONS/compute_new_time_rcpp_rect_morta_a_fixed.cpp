@@ -91,9 +91,9 @@ DataFrame compute_new_time_rcpp_rect_morta_a_fixed (DataFrame actualize_t1,Strin
       // # kinetic=(20.19*(tl^(-3.26))*exp(.041*sst))*dtime,
       // #'*with fishing*
       // #'to fix kinetic replace sst by sst_ref
-      kinetic[i]=(20.19*(pow(tl[i],(-3.26)))*exp(.041*sst_kin)+ fishing[i])*dtime;
+      kinetic[i]=(20.19*(pow(tl[i],(-3.26)))*exp(.041*sst_kin)+ fishing[i]);
       heat_tho[i]=kinetic[i]*mortality[i];
-      kinetic_heat[i]=kinetic[i]+heat_tho[i]*dtime;
+      kinetic_heat[i]=kinetic[i]+heat_tho[i];
         
       delta_tl_dyn[i]=TLsup[i]-TLinf[i];
       flow_m_per_tl[i]=prod[i]/delta_tl_dyn[i];

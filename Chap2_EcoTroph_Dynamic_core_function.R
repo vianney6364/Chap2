@@ -120,9 +120,9 @@ EcoTroph_dyn_iterative_v5_morta_biologic<-function(data_envi,nb_time_step,dtime,
                                                         mhw=mhw[i],
                                                         fishing=0,
                                                         #'*with mortality*
-                                                        kinetic=(20.19*(tl^(-3.26))*exp(.041*sst_year[i])+fishing)*dtime,
+                                                        kinetic=(20.19*(tl^(-3.26))*exp(.041*sst_year[i])+fishing),
                                                         heat_tho=(kinetic*mortality),
-                                                        kinetic_heat=kinetic+heat_tho*dtime)
+                                                        kinetic_heat=kinetic+heat_tho)
       }
       #2.2 creating offset of phi and compute new production value
       phi_pass_ct1_v4_rect_morta<-phi_pass_ct1_rcpp_rect_morta(ET=select(ET_ref_rect_morta,-production))
