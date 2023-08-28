@@ -21,18 +21,17 @@ library(tidyverse)
 library(data.table)
 
 #' #'*Matrice evolution envi data*
-setwd("~/CHAP2_/")
 source("FUNCTIONS/transfer_efficiency.R") # calulculate TE HTL
 source("FUNCTIONS/dyn_reference state_add_rect_morta.R") 
 # source("FUNCTIONS/dyn_reference state_add_rect_morta_by_tl.R")
 # source("FUNCTIONS/reference tl_by_dtime.R")
 # source("FUNCTIONS/dyn_dispatch_prod_loop.R")
 # source("FUNCTIONS/dyn_dispatch_phi_per_ct.R") 
-sourceCpp("rcpp function add morta/dyn_dispatch_prod_rect_morta.cpp")
-sourceCpp("rcpp function add morta/tl_by_dtime_bis2_rect_morta.cpp")
-sourceCpp("rcpp function add morta/compute_new_time_rcpp_rect_morta_a_fixed.cpp")
-sourceCpp("rcpp function add morta/phi_pass_ct1_rcpp_rect_morta.cpp")
-sourceCpp("rcpp function add morta/add_morta_biologic_coef.cpp")
+sourceCpp("FUNCTIONS/dyn_dispatch_prod_rect_morta.cpp")
+sourceCpp("FUNCTIONS/tl_by_dtime_bis2_rect_morta.cpp")
+sourceCpp("FUNCTIONS/compute_new_time_rcpp_rect_morta_a_fixed.cpp")
+sourceCpp("FUNCTIONS/phi_pass_ct1_rcpp_rect_morta.cpp")
+sourceCpp("FUNCTIONS/add_morta_biologic_coef.cpp")
 
 
 #' #'*to test function execute le 4 next row*
